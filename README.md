@@ -1,2 +1,0 @@
-# HeczeyLab
-Lab website
