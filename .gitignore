@@ -1,3 +1,6 @@
 /.quarto/
 **/*.quarto_ipynb
 .DS_Store
+left-sidebar.html
+right-sidebar.html
+no-sidebar.html
