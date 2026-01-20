@@ -1723,10 +1723,29 @@ input, select, textarea {
 			width: 100%;
 			margin: 0 0 2em 0;
 		}
+		/* Shared sizing for team photos */
+        .image.left, .image.right {
+            max-width: 250px; /* Use a fixed width or percentage so they match */
+            width: 100%;
+        }
 
 		.image.left {
 			float: left;
 			margin: 0 2em 2em 0;
+		}
+		.image.right {
+		float: right;
+		margin: 0 0 2em 2em; /* Adds space to the left and bottom of the image */
+		
+		}
+		@media screen and (max-width: 736px) {
+			.image.left, .image.right {
+				float: none;
+				display: block;
+				margin: 0 auto 1em auto;
+				max-width: 100%;
+				text-align: center;
+			}
 		}
 
 /* List */
