@@ -1748,6 +1748,69 @@ input, select, textarea {
 			}
 		}
 
+
+/* Graduate Student Grid Styling */
+
+	.student-box {
+		display: flow-root;
+		text-align: center;
+		padding: 1em;
+		/* This ensures the column content stays within its 1/3 width */
+		width: 100%; 
+	}
+
+		.student-box .image.centered {
+			display: block;
+			margin: 0 auto 1.5em auto;
+			/* This forces the image container to match the text width */
+			width: 100%; 
+			/* Optional: Limits the maximum size so it doesn't get huge on big screens */
+			max-width: 220px; 
+		}
+
+			.student-box .image.centered img {
+				border-radius: 0;
+				border: 1px solid #ccc;
+				
+				/* FIXED DIMENSIONS */
+				width: 100%;
+				aspect-ratio: 1 / 1; /* Forces a square; change to 4 / 5 for a portrait rectangle */
+				object-fit: cover;   /* Centers and crops the photo to fit the box without stretching */
+				
+				display: block;
+			}
+
+		.student-box h3 {
+			margin-bottom: 0.5em;
+			font-size: 1.2em;
+		}
+
+		.student-box p {
+			font-size: 0.9em;
+			line-height: 1.6em;
+			/* Helps keep the text boxes aligned */
+			margin-bottom: 0; 
+		}
+
+/* Alumni and Join Us Polishing */
+
+    #join-us {
+        background: #f9f9f9; /* Subtle gray background to make the box stand out */
+        border-radius: 8px;
+        margin-top: 3em;
+    }
+
+    .actions.special {
+        justify-content: center;
+        display: flex;
+        margin-top: 1.5em;
+    }
+
+    ul.divided li article header h4 {
+        color: #444;
+        font-weight: 700;
+    }
+
 /* List */
 
 	ul {
