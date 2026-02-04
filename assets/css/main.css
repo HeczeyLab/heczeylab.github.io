@@ -1,5 +1,5 @@
 @import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;800&display=swap");
 
 /*
 	Dopetrope by HTML5 UP
@@ -83,7 +83,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #252122;
+		background: #2e2e2e;
 		background-image: url("images/bg02.png");
 	}
 
@@ -99,15 +99,15 @@ input, select, textarea {
 		}
 
 	body, input, textarea, select {
-		font-family: 'Source Sans Pro';
-		font-weight: 300;
-		color: #5d5d5d;
-		font-size: 14pt;
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
+		color: #f4f4f4;
+		font-size: 16pt;
 		line-height: 1.75em;
 	}
 
 	strong, b {
-		color: #252122;
+		color: #ec7625;
 		font-weight: 400;
 	}
 
@@ -134,7 +134,9 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #252122;
+		font-family: 'Montserrat', serif;
+		text-transform: uppercase;
+		color: #ffffff;
 		font-weight: 700;
 	}
 
@@ -166,7 +168,7 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-top: solid 1px #dddddd;
+		border-top: solid 1px #009CA6;
 		height: 1px;
 		margin: 2em 0 2em 0;
 	}
@@ -214,6 +216,8 @@ input, select, textarea {
 			}
 
 		}
+
+
 
 /* Row */
 
@@ -1442,7 +1446,7 @@ input, select, textarea {
 
 	form label {
 		display: block;
-		color: #252122;
+		color: #ffffff;
 		font-weight: 400;
 		margin: 0 0 0.5em 0;
 	}
@@ -1458,7 +1462,7 @@ input, select, textarea {
 		padding: 0.75em 1em;
 		font-size: 1em;
 		border-radius: 5px;
-		border: solid 1px #dddddd;
+		border: solid 1px #555;
 		background: #fff;
 		width: 100%;
 	}
@@ -1569,9 +1573,10 @@ input, select, textarea {
 /* Box */
 
 	.box {
-		background: #ffffff;
-		border-bottom: solid 1px #ccc;
+		background: #2d2d2d;
+		border-bottom: solid 1px #009CA6;
 		padding: 2.75em 1.75em 2.75em 1.75em;
+		box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 	}
 
 		.box .image.featured {
@@ -1795,11 +1800,18 @@ input, select, textarea {
 /* Alumni and Join Us Polishing */
 
     #join-us {
-        background: #f9f9f9; /* Subtle gray background to make the box stand out */
+        /*background: #252525; */ /* darker gray background to make the box stand out */
         border-radius: 8px;
         margin-top: 3em;
+		border: 1px solid #444;
+		padding: 2em 0;
+        text-align: center;
     }
 
+	#join-us header h2 {
+        color: #fff;
+    }
+	
     .actions.special {
         justify-content: center;
         display: flex;
@@ -1807,9 +1819,73 @@ input, select, textarea {
     }
 
     ul.divided li article header h4 {
-        color: #444;
+        color:  #009CA6 !important;
         font-weight: 700;
     }
+
+
+/* --- Research Areas Custom Styling --- */
+
+/* 1. Force the Box to be full height and use Flexbox */
+#research-areas .box {
+    height: 100%;            /* Forces the box to fill the entire column height */
+    display: flex;           /* Turns on flexbox layout */
+    flex-direction: column;  /* Stacks items vertically (Image -> Title -> Text -> Button) */
+}
+
+/* 2. Fix the Image Size and Crop */
+#research-areas .image.featured img {
+    height: 220px;           /* Sets a fixed height for ALL research images */
+    width: 100%;             /* Ensures they span the full width of the box */
+    object-fit: cover;       /* THE MAGIC SAUCE: Crops the image to fill the space without squishing */
+    object-position: center; /* Centers the focal point */
+    border-radius: 5px 5px 0 0; /* Optional: Matches the box rounded corners */
+}
+
+/* 3. Push the Button to the Bottom */
+#research-areas .box p {
+    flex-grow: 1;            /* This makes the paragraph take up all available empty space, 
+                                pushing the footer (button) to the bottom */
+    margin-bottom: 1.5em;    /* Ensures there's always a little gap before the button */
+}
+
+/* 4. Ensure the Footer doesn't have extra margin messing up alignment */
+#research-areas .box footer {
+    margin-top: auto;        /* Redundant safety to push footer down */
+}
+
+/* Use this for images that shouldn't be cropped (like the SC Logo) */
+#research-areas .image.featured img.fit-whole {
+    object-fit: contain;     /* Forces the whole image to show */
+    padding: 10px;           /* Adds a little breathing room */
+    background-color: #fff;  /* Optional: White background looks clean for logos */
+}
+
+/* NEW: Helper class for Photos of People */
+/* Use this if heads are getting cut off in the clinical trial photo */
+#research-areas .image.featured img.focus-top {
+    object-position: top center; /* Aligns to the top so heads stay visible */
+}
+
+/* Dark Mode Magic: Inverts colors so white backgrounds become dark */
+#research-areas .image.featured img.invert-dark {
+    object-fit: contain;     /* Show the whole image */
+    background-color: transparent; /* No extra white box */
+    filter: invert(1) hue-rotate(180deg); /* The magic spell */
+    width: 100%;
+    height: 220px;
+}
+
+/* For transparent logos that should just float in the dark */
+#research-areas .image.featured img.float-logo {
+    object-fit: contain !important;      /* Shrink to fit */
+    background-color: transparent; /* REMOVE the white background */
+    padding: 20px;            /* Give it room to breathe */
+    width: 100%;
+    height: 220px;
+	margin: 0 auto;
+}
+
 
 /* List */
 
@@ -2034,6 +2110,15 @@ input, select, textarea {
 						background: #3dbaf4;
 					}
 
+
+				ul.social li a.fa-cloud {
+					background: #0560ff; /* Official Bluesky Blue */
+				}
+
+					ul.social li a.fa-cloud:hover {
+						background: #004dc7; /* Slightly darker on hover */
+					}
+
 				ul.social li a.fa-dribbble {
 					background: #c4376b;
 				}
@@ -2163,34 +2248,75 @@ input, select, textarea {
 
 	#header {
 		position: relative;
-		background: #ffffff;
-		border-bottom: solid 1px #ccc;
+		background: #2e2e2e;
+		border-bottom: solid 5px #009CA6;
 		padding: 5em 0 4em 0;
 		text-align: center;
 	}
 
 		#header h1 {
-			color: #252122;
+			color: #ffffff;
 			font-weight: 900;
 			font-size: 2.5em;
 			letter-spacing: -0.035em;
 			line-height: 1;
 		}
 
+/* Custom Logo Styling */
+#lab-logo {
+    display: inline-block;     /* Allows it to be centered by the parent */
+    border: 0;                 /* Removes any default link borders */
+    text-decoration: none;     /* Removes underlines */
+}
+
+#lab-logo img {
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    
+    /* THE MAGIC HACK */
+    
+    
+    margin-bottom: 1em;
+    vertical-align: middle;
+}
+
+/* Optional: Make it slightly smaller on mobile phones */
+@media screen and (max-width: 736px) {
+    #lab-logo img {
+        width: 250px;
+    }
+}
+
 /* Nav */
 
 	#nav {
-		margin: 2.5em 0 0 0;
+		margin: 2.5em auto 0 auto;
+		background: #009CA6;       /* The Teal Banner Background */
+        padding: 0;                /* Remove internal padding so buttons touch edges */
+        width: 100%;               /* Spans the width of the container */
+        max-width: 70em;           /* Matches your main content width */
+        border-radius: 5px;        /* Slightly rounded corners */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* A nice subtle shadow for depth */
+        
+        /* Centering the bar itself */
+        display: inline-block;
 	}
 
 		#nav > ul {
 			margin: 0;
+			padding: 0;
+			/* Flexbox ensures buttons are evenly spaced if you want, 
+			   or just centered text as default */
+			display: flex;             
+			justify-content: center;   
+			flex-wrap: wrap;
 		}
 
 			#nav > ul > li {
 				display: inline-block;
-				font-style: italic;
-				margin: 0 0.35em 0 0.35em;
+				
+				margin: 0;
 			}
 
 				#nav > ul > li > ul {
@@ -2198,10 +2324,13 @@ input, select, textarea {
 				}
 
 				#nav > ul > li > a {
-					border-radius: 5px;
-					color: #5d5d5d;
+					display: block;
+					border-radius: 0;
+					color: #ffffff;
 					text-decoration: none;
-					padding: 0.6em 1.2em 0.6em 1.2em;
+					font-size: 1.2em;
+					font-weight: 600;
+					padding: 1em 1.5em;
 					-moz-transition: background-color .25s ease-in-out;
 					-webkit-transition: background-color .25s ease-in-out;
 					-ms-transition: background-color .25s ease-in-out;
@@ -2210,7 +2339,8 @@ input, select, textarea {
 				}
 
 				#nav > ul > li:hover > a, #nav > ul > li.active > a {
-					background: #f3f3f3;
+					background: #007d85; /* Slightly darker teal on hover */
+        			color: #fff;
 				}
 
 				#nav > ul > li.current > a {
@@ -2218,6 +2348,10 @@ input, select, textarea {
 					color: #fff !important;
 					font-weight: 700;
 				}
+
+				#nav > ul > li:first-child > a { border-top-left-radius: 5px; border-bottom-left-radius: 5px; }
+    			#nav > ul > li:last-child > a { border-top-right-radius: 5px; border-bottom-right-radius: 5px; }
+
 
 	.dropotron {
 		border-radius: 5px;
@@ -2270,9 +2404,9 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		background: #CCE8F4 url("../../images/pic01.jpg");
-		background-position: center center;
-		background-size: auto 100%;
+		background: #CCE8F4 url("../../images/8.South Clinic_Aaron Leitz.jpg");
+		background-position: center 30%;
+		background-size: cover;
 		background-repeat: no-repeat;
 		text-align: center;
 		position: relative;
@@ -2281,7 +2415,7 @@ input, select, textarea {
 	}
 
 		#banner header {
-			background-color: #000000;
+			background-color: #555;
 			display: inline-block;
 			padding: 2.5em 5em;
 			border-radius: 5px;
@@ -2329,12 +2463,12 @@ input, select, textarea {
 
 			#intro .middle:before {
 				content: '';
+				display: none;
 				width: 32px;
 				height: 100%;
 				position: absolute;
 				left: -24px;
 				top: 0;
-				display: block;
 				z-index: -1;
 				box-shadow: 32px 0 0 0 #fff, 0 -32px 0 0 #fff, 0 32px 0 0 #fff, 32px 32px 0 0 #fff, 32px -32px 0 0 #fff, 0 0 32px 0 rgba(0, 0, 0, 0.15);
 			}
@@ -2346,7 +2480,7 @@ input, select, textarea {
 				position: absolute;
 				right: -24px;
 				top: 0;
-				display: block;
+				display: none;
 				z-index: -1;
 				box-shadow: -32px 0 0 0 #fff, 0 -32px 0 0 #fff, 0 32px 0 0 #fff, -32px 32px 0 0 #fff, -32px -32px 0 0 #fff, 0 0 32px 0 rgba(0, 0, 0, 0.15);
 			}
@@ -2363,7 +2497,7 @@ input, select, textarea {
 
 	#main {
 		position: relative;
-		background: #f7f7f7 url("images/bg02.png");
+		background: #2e2e2e url("images/bg02.png");
 		padding: 4em 0 4em 0;
 	}
 
@@ -2380,7 +2514,8 @@ input, select, textarea {
 		}
 
 		#main .major h2 {
-			background: #f7f7f7 url("images/bg02.png");
+			background: #2e2e2e url("images/bg02.png");
+			color: #ffffff;
 		}
 		/* Custom: Force equal height boxes in Research Areas */
 		#main .row.aln-center {
@@ -3046,4 +3181,94 @@ input, select, textarea {
 				padding: 40px 0 20px 0;
 			}
 
+	}
+/* Slideshow Styling */
+
+	.slideshow-container {
+	  max-width: 600px;
+	  position: relative;
+	  margin: auto;
+	  border: 1px solid #444; /* Subtle border */
+	}
+
+/* Hide the images by default */
+	.mySlides {
+	  display: none;
+	
+	}
+	
+	.mySlides img {
+    /* Force all images to be this height */
+    height: 400px; 
+    
+    /* This ensures the image covers the area without stretching/squishing */
+    object-fit: cover; 
+    width: 100%;
+	}
+	
+/* Next & previous buttons */
+	.prev, .next {
+	  cursor: pointer;
+	  position: absolute;
+	  top: 50%;
+	  width: auto;
+	  margin-top: -22px;
+	  padding: 16px;
+	  color: white;
+	  font-weight: bold;
+	  font-size: 18px;
+	  transition: 0.6s ease;
+	  border-radius: 0 3px 3px 0;
+	  user-select: none;
+	  background-color: rgba(0,0,0,0.5); /* Semi-transparent black */
+	}
+
+/* Position the "next button" to the right */
+	.next {
+	  right: 0;
+	  border-radius: 3px 0 0 3px;
+	}
+
+/* On hover, add a solid background color (Seattle Children's Teal) */
+	.prev:hover, .next:hover {
+	  background-color: #009CA6;
+	}
+
+/* Caption text */
+	.text {
+	  color: #f2f2f2;
+	  font-size: 1.2em;
+	  padding: 8px 12px;
+	  position: absolute;
+	  bottom: 8px;
+	  width: 100%;
+	  text-align: center;
+	  background: rgba(0, 0, 0, 0.6); /* Dark band so text pops */
+	}
+
+/* The dots/bullets/indicators */
+	.dot {
+	  cursor: pointer;
+	  height: 15px;
+	  width: 15px;
+	  margin: 0 2px;
+	  background-color: #717171;
+	  border-radius: 50%;
+	  display: inline-block;
+	  transition: background-color 0.6s ease;
+}
+
+	.active, .dot:hover {
+	  background-color: #ec7625; /* Active dot is Orange! */
+	}
+
+/* Fading animation */
+	.fade {
+	  animation-name: fade;
+	  animation-duration: 1.5s;
+	}
+
+	@keyframes fade {
+	  from {opacity: .4}
+	  to {opacity: 1}
 	}
