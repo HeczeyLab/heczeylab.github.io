@@ -394,14 +394,14 @@
 
 							<div class="col-4 col-12-medium">
 								<section>
-									<header>
+									<!-- <header>
 										<h2>Contact Us</h2>
 									</header>
 									<ul class="social">
 										<li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
 										<li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
 										<li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
-									</ul>
+									</ul> -->
 									<ul class="contact">
 										<li>
 											<h3>Address</h3>
@@ -464,7 +464,22 @@
 										<ul class="links">
 											<li>&copy; Heczey Lab. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 										</ul>
+										<p>
+										<span id="last-updated"></span>
+										</p>
+									
 									</div>
+									<script>
+										// Get the last modified date of the current document
+										const date = new Date(document.lastModified);
+
+										// Format it nicely (e.g., "February 10, 2026")
+										const options = { year: 'numeric', month: 'long', day: 'numeric' };
+										const formattedDate = date.toLocaleDateString('en-US', options);
+
+										// Inject it into the HTML
+										document.getElementById("last-updated").innerHTML = "Last updated: " + formattedDate;
+									</script>
 							</div>
 						</div>
 					</div>

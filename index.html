@@ -134,12 +134,18 @@
 										<h3>Commitment to Diversity, Equity, and Inclusion</h3>
 									</header>
 									<p style="font-size: 1.1em; line-height: 1.7em; max-width: 850px; margin: 0 auto;">
-										We believe that scientific excellence is inseparable from a diverse and inclusive environment. 
-										The Heczey Lab is committed to fostering a culture where researchers from all backgrounds—regardless 
-										of race, gender, orientation, or disability—are empowered to bring their unique perspectives 
-										to the fight against cancer. We actively work to dismantle barriers in STEM and cultivate 
-										the next generation of diverse scientific leaders.
+										We believe that scientific excellence is cultivated in a diverse and inclusive 
+										environment. The Heczey Lab is committed to fostering a culture where researchers
+										from all backgrounds, regardless of race, gender, orientation, or disability, are
+										empowered to bring their unique perspectives to the fight against cancer. We strive
+										to dismantle barriers in STEM and develop the next generation of scientific leaders
+										. We are proud to work for an organization that maintains a commitment to workforce
+										diversity. 
 									</p>
+									<p style="font-size: 0.9em;">
+									<i class="icon solid fa-link"></i> 
+									<a href="https://www.seattlechildrens.org/about/healthcare-experience-outcomes/report-highlight-workforce-diversity/" target="_blank">Seattle Children's Workforce Diversity Report</a>
+								</p>
 								</section>
 								 <hr style="margin: 3em 0;" />
 							</div>
@@ -301,14 +307,14 @@
 
 							<div class="col-4 col-12-medium">
 								<section>
-									<header>
+									<!-- <header>
 										<h2>Contact Us</h2>
 									</header>
 									<ul class="social">
 										<li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
 										<li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
 										<li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
-									</ul>
+									</ul> -->
 									<ul class="contact">
 										<li>
 											<h3>Address</h3>
@@ -370,8 +376,23 @@
 								<div id="copyright">
 										<ul class="links">
 											<li>&copy; Heczey Lab. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+											
 										</ul>
+									<p>
+										<span id="last-updated"></span>
+									</p>
 									</div>
+									<script>
+										// Get the last modified date of the current document
+										const date = new Date(document.lastModified);
+
+										// Format it nicely (e.g., "February 10, 2026")
+										const options = { year: 'numeric', month: 'long', day: 'numeric' };
+										const formattedDate = date.toLocaleDateString('en-US', options);
+
+										// Inject it into the HTML
+										document.getElementById("last-updated").innerHTML = "Last updated: " + formattedDate;
+									</script>
 							</div>
 						</div>
 					</div>

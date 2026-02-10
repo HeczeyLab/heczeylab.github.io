@@ -2610,6 +2610,27 @@ input, select, textarea {
 			padding: 0.85em 2.25em 0.85em 2.25em;
 		}
 
+/* Mobile Stacking Version */
+@media screen and (max-width: 480px) {
+    ul.dates li {
+        padding-left: 0 !important; /* Remove the side gap */
+        display: flex;
+        flex-direction: column; /* Stack date on top of text */
+    }
+
+    ul.dates li .date {
+        position: relative !important; /* Stop floating it */
+        left: 0;
+        top: 0;
+        margin-bottom: 1em; /* Add space below the arrow */
+    }
+    
+    /* Hide the arrow if it points right (since text is now below) */
+    ul.dates li .date::after {
+        display: none; 
+    }
+}
+
 /* XLarge */
 
 	@media screen and (max-width: 1680px) {
