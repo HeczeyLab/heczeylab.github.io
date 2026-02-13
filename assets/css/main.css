@@ -2118,6 +2118,13 @@ input, select, textarea {
 					ul.social li a.fa-cloud:hover {
 						background: #004dc7; /* Slightly darker on hover */
 					}
+				ul.social li a.fa-youtube {
+					background: #ff0000; /* Official YouTube Red */
+				}
+
+				ul.social li a.fa-youtube:hover {
+					background: #ff3333; /* Slightly lighter red for the hover effect */
+				}
 
 				ul.social li a.fa-dribbble {
 					background: #c4376b;
@@ -2404,13 +2411,13 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		background: #CCE8F4 url("../../images/8.South Clinic_Aaron Leitz.jpg");
-		background-position: center 30%;
+		background: #CCE8F4 url("../../images/IMG_2637.jpeg");
+		background-position: center 39%;
 		background-size: cover;
 		background-repeat: no-repeat;
 		text-align: center;
 		position: relative;
-		padding: 8em 0;
+		padding: 6em 0 10em 0;
 		margin: 4em 0 0 0;
 	}
 
@@ -2419,6 +2426,9 @@ input, select, textarea {
 			display: inline-block;
 			padding: 2.5em 5em;
 			border-radius: 5px;
+			/* --- NEW ADDITIONS TO NUDGE IT UP --- */
+			position: relative;
+			top: -3em; /* Change this number to move it higher or lower */
 		}
 
 			#banner header h2 {
