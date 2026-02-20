@@ -8,9 +8,6 @@ This is the hosted website for the Heczey Lab created by David de la Cerda.
 
 Credits:
 
-	Demo Images:
-		Dreametry Doodle (dreametrydoodle.com)
-
 	Icons:
 		Font Awesome (fontawesome.io)
 
