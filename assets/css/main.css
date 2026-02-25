@@ -2424,6 +2424,16 @@ input, select, textarea {
 		/* Increase this number (e.g., 500px, 600px) to show more of the image top-to-bottom */
 		min-height: 400px;
 	}
+	/* This tells the browser: "If the screen is 736px wide or smaller, apply these new rules!" */
+	@media screen and (max-width: 736px) {
+		#banner {
+			/* Shrinks the banner so users don't have to scroll forever to get to the content */
+			min-height: 300px; 
+
+			/* Optional: Reduces the top margin so there isn't a massive gap on mobile */
+			margin-top: 2em; 
+		}
+	}
 
 		#banner header {
 			background-color: #555;
