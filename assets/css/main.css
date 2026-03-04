@@ -2413,7 +2413,7 @@ input, select, textarea {
 	#banner {
 		background: #CCE8F4 url("../../images/building_cure.jpeg");
 		/* 2. Center the image perfectly */
-		background-position: center bottom; 
+		background-position: center center; 
 
 		background-size: cover;
 		background-repeat: no-repeat;
