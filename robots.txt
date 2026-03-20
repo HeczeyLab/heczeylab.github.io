@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://heczeylab.github.io/sitemap.xml
