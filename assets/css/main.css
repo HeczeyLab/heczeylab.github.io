@@ -2460,6 +2460,35 @@ input, select, textarea {
 				font-size: 2.0em;
 			}
 
+/* Global Top Banner */
+.lab-banner-classic {
+	background-color: #008099;
+	color: #ffffff;
+	text-align: center;
+	padding: 16px 20px;          /* Increased padding for vertical height */
+	font-size: 1.85rem;           /* Scaled up text size */
+	line-height: 1.5;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.lab-banner-classic strong {
+	color: #ffffff;
+}
+
+.lab-banner-classic a {
+	color: #ec7625;
+	font-weight: bold;
+	text-decoration: none;
+	margin-left: 10px;
+	white-space: nowrap;          /* Keeps link arrow on the same line */
+}
+
+.lab-banner-classic a:hover {
+	text-decoration: underline;
+	color: #ff9d5c;              /* Slightly brighter orange on hover */
+}
+
+
 /* Intro */
 
 	#intro {
