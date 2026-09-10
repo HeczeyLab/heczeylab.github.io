@@ -2605,6 +2605,12 @@ input, select, textarea {
 		padding: 4em 0;
 	}
 
+		/* Forces all footer links, text, and columns above the background */
+		#footer .container {
+			position: relative;
+			z-index: 1;
+		}
+
 		#footer:before {
 			content: '';
 			position: absolute;
@@ -2616,6 +2622,7 @@ input, select, textarea {
 			background-size: 100% 100%;
 			z-index: 0;
 			opacity: 0.5;
+			pointer-events: none; /* Stops the background overlay from capturing mouse clicks */
 		}
 
 		#footer a {
